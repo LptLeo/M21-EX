@@ -1,0 +1,96 @@
+@use 'variaveis';
+
+.hero {
+    margin-bottom: 56px;
+    padding-top: 56px;
+
+    &__content {
+        max-width: 1623px;
+        margin: 0 auto;
+
+        .title {
+            margin: 16px 0 8px;
+        }
+
+        &__brading {
+            img {
+                height: 191.81px;
+                width: 341px;
+            }
+        }
+
+        &__container {
+            color: variaveis.$corTextoPrincipal;
+            
+            &__more {
+                color: variaveis.$corTextoSecundario;
+                margin-bottom: 16px;
+
+                
+                a {
+                    color: variaveis.$corLink;
+                }
+            }
+            
+            &__info {
+                display: flex;
+                align-items: center;
+                max-width: 326px;
+                width: 100%;
+                flex-wrap: wrap;
+                
+                img {
+                    max-height: 20px;
+                    margin-right: 4px;
+                    margin-bottom: 5px;
+                }
+
+                img:nth-child(2) {
+                    margin-right: 10px;
+                }
+
+                div {
+                    letter-spacing: -.1px;
+                    line-height: 1.6;
+                }
+            }
+
+            &__buttons {
+                font-size: 15px;
+                font-weight: 900;
+                text-transform: uppercase;
+                margin-top: 28px;
+                
+                button {
+                    border-radius: 0.25rem;
+                    padding: 0 24px;
+                    font-size: 15px;
+                    font-weight: 900;
+                    letter-spacing: 1.5px;
+                    height: 56px;
+                }
+
+                button:first-child {
+                    background-color: variaveis.$corBotaoPrincipal;
+                    color: variaveis.$corTextoPrincipal;
+                    margin: 6px 11px;
+                    margin-left: 0;
+                }
+
+                button:last-child {
+                    background-color: rgba(0,0,0,.6);
+                    border: 1px solid variaveis.$corTextoPrincipal;
+                    color: variaveis.$corTextoPrincipal;
+                    margin: 4px 12px;
+                }
+            }
+
+            &__desc {
+                padding: 16px 0;
+                color: variaveis.$corTextoPrincipal;
+                letter-spacing: -.1px;
+                max-width: 874px;
+            }
+        }
+    }
+}

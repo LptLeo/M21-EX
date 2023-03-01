@@ -1,0 +1,65 @@
+@use 'variaveis';
+
+.detalhes {
+    margin: 0 auto;
+    max-width: 1623px;
+    width: 100%;
+
+    &__title {
+        letter-spacing: 2px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid rgba(249, 249, 249, 0.2);
+        margin-right: 40px;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        padding-bottom: 24px;
+        padding-right: 24px;
+        font-size: 24px;
+        color: variaveis.$corTextoPrincipal;
+        padding-right: 24px;
+        padding-bottom: 24px;
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        color: variaveis.$corTextoPrincipal;
+
+        &__sinopse {
+            max-width: 755px;
+        }
+
+        &__info {
+            font-size: 15px;
+            letter-spacing: -.1px;
+
+            img {
+                width: 20px;
+                height: 20px;
+            }
+            
+            div {
+                min-width: 400px;
+                width: 100%;
+
+                div {
+                    padding-bottom: 8px;
+
+                    p {
+                        height: 24px;
+                    }
+
+                    p:first-child {
+                        color: variaveis.$corTextoSecundario;
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                display: flex;
+            }
+        }
+    }
+}

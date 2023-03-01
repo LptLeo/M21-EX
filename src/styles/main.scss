@@ -1,0 +1,100 @@
+@use 'variaveis';
+@use 'hero';
+@use 'detalhes';
+@use 'footer';
+@use 'header';
+
+@font-face {
+    font-family: Avenir;
+    src: url('../../assents/fonts/Avenir-Bold.woff2');
+    font-weight: 700;
+}
+@font-face {
+    font-family: Avenir;
+    src: url('../../assents/fonts/Avenir-Regular.woff2');
+    font-weight: 400;
+}
+
+@mixin title($fontSize: 22px) {
+    font-size: $fontSize;
+}
+
+@mixin text($fontSize: 12px) {
+    font-size: $fontSize;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Avenir, sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+.imagem-fundo {
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+}
+
+.title--big {
+    @include title(20px);
+    
+    color: variaveis.$corTextoSecundario;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.title {
+    @include title();
+    
+    color: variaveis.$corTitle;
+    font-weight: 900;
+}
+
+.text--big {
+    @include text(20px);
+
+    color: variaveis.$corTextoPrincipal;
+}
+
+.text {
+    @include text();
+}
+
+.link {
+    color: variaveis.$corLink;
+}
+
+.button {
+    margin-right: 16px;
+    height: 40px;
+    padding: 0 16px;
+    white-space: normal;
+    color: variaveis.$corTextoPrincipal;
+    border-radius: 0.25rem;
+    font-size: 15px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    line-height: 1.6;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    color: variaveis.$corTextoPrincipal;
+
+
+    &--secondary {
+        background-color: variaveis.$corBotaoPrincipal;
+        border: 1px solid variaveis.$corBotaoPrincipal;
+        padding: 0 16px;
+    }
+
+    &--dark {
+        background-color: variaveis.$corBotaoDark;
+        border: 1px solid variaveis.$corTextoPrincipal;
+        margin: 0;
+    }
+}

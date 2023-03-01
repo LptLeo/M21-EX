@@ -1,0 +1,49 @@
+@use 'variaveis';
+
+.header {
+    height: 72px;
+    background-color: variaveis.$corHeader;
+    transition: background-color .5s ease;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    &__logo, &__links button:first-child {
+        transition: opacity .5s ease;
+    }
+
+    &--is-hidden {
+        background-color: transparent;
+
+        .header {
+            &__logo, &__links button:first-child {
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity .5s ease;
+            }
+        }
+    }
+
+    &__container {
+        height: 72px;
+        padding: 8px 36px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    h1 {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        max-width: 80px;
+        width: 100%;
+    }
+
+    &__links {
+        display: flex;
+    }
+}

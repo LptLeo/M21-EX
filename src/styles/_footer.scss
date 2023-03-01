@@ -1,0 +1,45 @@
+@use 'variaveis';
+
+.footer {
+    margin-top: 100px;
+    background-color: #0e0b14;
+
+    &__logo-disney {
+        width: 94px;
+        margin: 0 auto;
+        padding-top: 19px;
+    }
+
+    &__buttons {
+        max-width: 500px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        button, div {
+            background-color: transparent;
+            border: none;
+            letter-spacing: -.1px;
+        }
+        
+        button {
+            color: variaveis.$corTextoPrincipal;
+            padding: 1px 6px;
+            margin: 11px 5px 10px;
+        }
+
+        div {
+            max-width: 444px;
+            color: variaveis.$corTextoSecundario;
+            text-align: center;
+        }
+    }
+
+    &__copy {
+        text-align: center;
+        color: variaveis.$corTextoSecundario;
+        padding-top: 8px;
+        padding-bottom: 24px;
+    }
+}
